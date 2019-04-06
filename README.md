@@ -18,7 +18,7 @@ A [docsify](https://github.com/docsifyjs/docsify) plugin to add an `Edit that pa
     }
   }
 </script>
-<script src="//unpkg.com/docsify-edit-link@1"></script>
+<script src="//unpkg.com/docsify-edit-link@^1"></script>
 ```
 
 ## Configuration
