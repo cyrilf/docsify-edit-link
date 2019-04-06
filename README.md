@@ -11,11 +11,14 @@ A [docsify](https://github.com/docsifyjs/docsify) plugin to add an `Edit that pa
     // ...
     editLink: {
       text: 'Edit this document',
-      editUrl: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/'
+      // text: '<span style="color: limegreen;">Edit this document</span>',
+      repo: 'cyrilf/docsify-edit-link',
+      // repo: 'https://github.com/cyrilf/docsify-edit-link/edit/master/docs/',
+      cssClass: 'docsify-edit-link m-0'
     }
   }
 </script>
-<script src="//unpkg.com/docsify-edit-link@1.0.0"></script>
+<script src="//unpkg.com/docsify-edit-link@1"></script>
 ```
 
 ## Configuration
@@ -25,12 +28,13 @@ These are the options you can configure under `window.$docsify = { editLink: { .
 | option | description | default value |
 |-|-|-|
 | text | the button text (can also be html) | Edit this page |
-| url | the edit url of your project | by default it uses the `repo` from your docsify config, if not set, it will throw an error as it's required |
+| repo | your github alias [userName]/[project] or full `edit url` | uses the `repo` from your docsify config if set |
+| cssClass | a specific class to apply | edit-link |
 
 
 ## Customization
 
-You can use the CSS class `edit-link` if you want to apply any specific style to your link.
+You can use the CSS class `edit-link` (or the one you specified via the `cssClass` option) if you want to apply any specific style to your link.
 
 Also, remember that the `text` option also accept html. So you are very flexible in what you want to render.
 
@@ -47,6 +51,7 @@ It's simple, open your project on Github/GitLab ... copy the `url` of where docs
 The first line is the root of your project.
 The second line is the same but `tree` is now `edit`.
 This is your `edit url` (and yes, it's a 404. This plugin will automaticaly add the file name at the end to make it work)
+Use this only if you don't host your code on Github or if your docsify root location is not `./docs`.
 
 ----
 

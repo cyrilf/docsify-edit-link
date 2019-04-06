@@ -1,6 +1,6 @@
 {
   "name": "docsify-edit-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A docsify plugin to add an `Edit that page` link",
   "main": "index.js",
   "scripts": {
